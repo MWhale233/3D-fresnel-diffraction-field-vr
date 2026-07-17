@@ -1,10 +1,3 @@
-fileFormatVersion: 2
-guid: 1c3839a1070e4a14ab46e590c49bec68
-labels:
-- isdkRequirePackage-com.unity.xr.openxr
-- isdkRecommendPackage-com.unity.xr.hands
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:b18d947e6612d1c013694be097e753c74e66a343bcae407c974fc743b8e59fdb
+size 256

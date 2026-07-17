@@ -1,20 +1,3 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
-
-public static class InputActionExtensions
-{
-    public static bool IsPressed(this InputAction inputAction)
-    {
-        return inputAction.ReadValue<float>() > 0f;
-    }
-
-    public static bool WasPressedThisFrame(this InputAction inputAction)
-    {
-        return inputAction.triggered && inputAction.ReadValue<float>() > 0f;
-    }
-
-    public static bool WasReleasedThisFrame(this InputAction inputAction)
-    {
-        return inputAction.triggered && inputAction.ReadValue<float>() == 0f;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c5754eb0c7516657c2331ab662b79a786934f76043f1d14052c03311e2d9c75
+size 570

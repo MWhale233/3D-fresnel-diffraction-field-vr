@@ -1,17 +1,3 @@
-using UnityEngine;
-using VRSYS.Core.Networking;
-
-namespace VRSYS.Core.ScriptableObjects
-{
-    [CreateAssetMenu(menuName = "Scriptable Objects/NetworkUserSpawnInfo")]
-    public class NetworkUserSpawnInfo : ScriptableObject
-    {
-        public UserRole userRole = UserRole.HMD;
-        public string userName;
-        public Color userColor;
-        
-        public void SetUserRole(UserRole role) => userRole = role;
-        public void SetUserName(string name) => userName = name;
-        public void SetUserColor(Color color) => userColor = color;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa1027f1fa4c1fa093d61567a2d304d2bdae509175a465fd0e16e0ef57ada25b
+size 574

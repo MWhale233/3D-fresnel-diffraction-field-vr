@@ -1,16 +1,3 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--
-  ******************************************************************************
-  **               Math.NET Native Provider Interop Files                     **
-  ******************************************************************************
-  -->
-  <ItemGroup Condition="'$(MSBuildThisFileDirectory)' != '' And HasTrailingSlash('$(MSBuildThisFileDirectory)')">
-    <MathNetInteropFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\**\*.dll" />
-    <MathNetInteropFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\**\*.so" />
-    <MathNetInteropFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\**\*.dylib" />
-    <None Include="@(MathNetInteropFiles)" Visible="false">
-      <Link>runtimes/%(RecursiveDir)%(FileName)%(Extension)</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-</Project>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a29d6f4e1d2d718dd51bafd02536cabfe4875fc94f006d15d07eda8dfc9cf541
+size 957
