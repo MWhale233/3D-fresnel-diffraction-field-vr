@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7bca786165e158f199030446d4bdb175a90d454f7119658a1b21f90e3f86c689
-size 526
+# 全局自动文本换行归一化（Windows/macOS/Linux统一）
+* text=auto
+
+# ========== LFS 大文件托管规则 ==========
+# 指定MKL数学库dll走LFS
+fresnel-vr/Assets/Packages/MathNet.Numerics.MKL.Win.*/libMathNetNumericsMKL.dll filter=lfs diff=lfs merge=lfs -text
+fresnel-vr/Assets/Packages/MathNet.Numerics.MKL.Win-x64.3.0.0/runtimes/win-x64/native/libMathNetNumericsMKL.dll filter=lfs diff=lfs merge=lfs -text
+
+# 3D体积纹理资源文件走LFS
+fresnel-vr/Assets/VolumeTextures/NewGeneratedTexture3D.asset filter=lfs diff=lfs merge=lfs -text
+
+# 全局所有大型二进制资源统一交给LFS（模型、贴图、音视频、dll、预制资源等）
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.bundle filter=lfs diff=lfs merge=lfs -text
+
+# ========== GitHub Linguist 语言统计修复（消除Smalltalk占比） ==========
+# Unity资源文件不参与语言识别
+*.meta linguist-detectable=false
+*.prefab linguist-detectable=false
+*.asset linguist-detectable=false
+*.mat linguist-detectable=false
+*.dwlt linguist-detectable=false
+
+# 配置文本不参与语言统计
+*.json linguist-detectable=false
+*.txt linguist-detectable=false
+
+# 强制C#脚本识别为C#（你的核心代码）
+*.cs linguist-language=C#
+
+# 第三方包、缓存目录标记为供应商代码，不计入统计
+Packages/** linguist-vendored
+Library/** linguist-vendored
+UserSettings/** linguist-vendored
